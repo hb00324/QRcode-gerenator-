@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRcode gerenator</title>
+    <link rel="stylesheet" href="css_reset.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <div class="container">
+        <div class="CopyInfo" id="CopyInfo">
+            <p>QRcode copied!</p>
+        </div>
+        <div class="item">
+            <header>
+                <img src="logo-qr-generator.svg" alt="">
+            </header>
+            <div class="content" id="content">
+                <input id="input" type="text" placeholder="Enter an url">
+                <button id="btn">QR code</button>
+            </div>
+            <div class="btn-wrap" id="btn-wrap">
+                <button type="button" id="dlqrImg">download</button>
+                <button type="button" id="copyImg">share</button>
+            </div>
+            <div class="qrcode closeImage" id="qrcode">
+                <img src="" id="qrImage">
+            </div>
+        </div>
+    
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+</body>
+</html>

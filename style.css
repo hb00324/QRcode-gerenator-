@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.container{ 
+    position: relative;
+    background:url(bg-illustration.svg) no-repeat;
+    background-position: 90% 20%;
+    height: 100vh;
+    background-color: #111729;
+}
+.container .item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10rem;
+    
+}
+
+.container .content{
+    position: relative;
+    width: 60%;
+    max-width: 640px;
+    min-width: 360px;
+    margin-top: 3rem;
+    
+}
+
+.container .content.error{
+    animation: error 300ms linear 1 ;
+}
+
+.container .content input{
+    appearance: none;
+    border: 1px solid #3662E3;
+    padding: 1.5rem 2rem;
+    padding-right: 8rem;
+    width: 100%;
+    background-color: #000;
+    border-radius: 16.8px;
+    color:#fff;
+    
+}
+
+.container .item .content button{
+    appearance: none;
+    padding: 1rem 2rem;
+    border: 2px solid #3662E3;
+    background-color: #3662E3;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    right:7px;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+
+.container > .item > .qrcode {
+    margin-top:3rem;
+    width: 60%;
+    max-height:0;
+    max-width: 640px;
+    min-width: 360px;
+    overflow: hidden ;
+    margin:auto;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 12px;
+    background-color:#000;
+    border:1px solid #3662E3;
+    display: none;
+    
+}
+@keyframes showImage {
+    0%{max-height: 0px;}
+    
+    100%{max-height: 220px;}
+}
+
+@keyframes error {
+    0%{transform: translateX(-2px);}
+    25%{transform: translateX(0px);}
+    50%{transform: translateX(-5px);}
+    75%{transform: translateX(0px);}
+    100%{transform: translateX(-2px);}
+}
+
+.qrcode.showImage{
+    animation: showImage 700ms ease-out 1 forwards;
+}
+
+.contaienr > .item > .qrcode img{
+    width: 100%;
+}
+.container > .CopyInfo{
+    padding:3rem;
+    position: absolute;
+    right: 50%;
+    bottom: 3%;
+    transform: translateX(50%);
+    display:none;
+}
+
+.container > .CopyInfo > p{
+font-size: 30px;
+text-align: center;
+color: #fff;
+
+}
+.container > .item  > .btn-wrap{
+    margin:0.5rem ;
+    width: 60%;
+    min-width: 360px;
+    max-width: 640px;
+    display: flex;
+    justify-content: space-between;
+}
+.container > .item > .btn-wrap > button{
+        appearance: none;
+        padding:0.5rem 1rem;
+        color:#fff;
+        border:none;
+        border-radius: 0.5rem;
+        width: 300px;
+        display: inline-block;
+        background-color: #3662E3;
+        cursor: pointer;
+        display: none;
+}
